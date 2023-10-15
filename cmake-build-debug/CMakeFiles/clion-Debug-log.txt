@@ -1,0 +1,45 @@
+/snap/clion/250/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/250/bin/ninja/linux/x64/ninja -DCMAKE_TOOLCHAIN_FILE=/home/andrey/.clion-vcpkg/vcpkg/scripts/buildsystems/vcpkg.cmake -G Ninja -S /home/andrey/C++_ITMO/bigint_cpp/bigint-andreyDagger -B /home/andrey/C++_ITMO/bigint_cpp/bigint-andreyDagger/cmake-build-debug
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-linux...
+All requested packages are currently installed.
+Restored 0 package(s) from /home/andrey/.cache/vcpkg/archives in 2.6 us. Use --debug to see more details.
+Total install time: 32.5 us
+The package gmp can be imported via CMake FindPkgConfig module:
+
+    #  gmp
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(gmp REQUIRED IMPORTED_TARGET gmp)
+    target_link_libraries(main PkgConfig::gmp)
+
+    # gmpxx
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(gmpxx REQUIRED IMPORTED_TARGET gmpxx)
+    target_link_libraries(main PkgConfig::gmpxx)
+
+The package gtest is compatible with built-in CMake targets:
+
+    enable_testing()
+    
+    find_package(GTest CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE GTest::gtest GTest::gtest_main GTest::gmock GTest::gmock_main)
+    
+    add_test(AllTestsInMain main)
+
+-- Running vcpkg install - done
+-- The C compiler identification is GNU 11.1.0
+-- The CXX compiler identification is GNU 11.1.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found GTest: /home/andrey/C++_ITMO/bigint_cpp/bigint-andreyDagger/cmake-build-debug/vcpkg_installed/x64-linux/share/gtest/GTestConfig.cmake (found version "1.13.0")  
+-- Enabling _GLIBCXX_DEBUG...
+-- Configuring done (1.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/andrey/C++_ITMO/bigint_cpp/bigint-andreyDagger/cmake-build-debug

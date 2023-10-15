@@ -1,0 +1,3 @@
+/home/andrey/C++_ITMO/bigint_cpp/bigint-andreyDagger/cmake-build-debug/CMakeFiles/tests.dir
+/home/andrey/C++_ITMO/bigint_cpp/bigint-andreyDagger/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/andrey/C++_ITMO/bigint_cpp/bigint-andreyDagger/cmake-build-debug/CMakeFiles/rebuild_cache.dir
